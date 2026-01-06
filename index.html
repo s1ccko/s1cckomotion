@@ -37,17 +37,40 @@
 
 <!-- GALERIA -->
 <main class="gallery">
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim1.mp4"></video></div>
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim2.mp4"></video></div>
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim3.mp4"></video></div>
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim4.mp4"></video></div>
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim5.mp4"></video></div>
-    <div class="card"><video muted loop playsinline preload="metadata"><source src="assets/videos/anim6.mp4"></video></div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/shorts/H91Yx_ZauzQ" 
+            title="Vídeo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO2_ID" 
+            title="Vídeo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO3_ID" 
+            title="Vídeo 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO4_ID" 
+            title="Vídeo 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO5_ID" 
+            title="Vídeo 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO6_ID" 
+            title="Vídeo 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
 </main>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-
     const cards = document.querySelectorAll(".card");
 
     const observer = new IntersectionObserver(entries => {
@@ -60,15 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.15 });
 
     cards.forEach(card => observer.observe(card));
-
-    document.querySelectorAll(".card video").forEach(video => {
-        video.addEventListener("mouseenter", () => video.play());
-        video.addEventListener("mouseleave", () => {
-            video.pause();
-            video.currentTime = 0;
-        });
-    });
-
 });
 </script>
 
